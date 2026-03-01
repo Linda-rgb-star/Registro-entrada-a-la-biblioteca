@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Toma de Datos Biométricos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <h1>Sistema De Toma De Datos Biométricos</h1>
+        <p>Biblioteca Universidad Libre Seccional Bogotá</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <a href="{{ url_for('obtener') }}" class="card">
+        <div class="icon red">🔒</div>
+        <div>
+            <h2>Obtener Locker</h2>
+            <p>Coloca tu huella para recibir un locker asignado</p>
+        </div>
+    </a>
+
+    <a href="{{ url_for('liberar') }}" class="card">
+        <div class="icon gray">🔓</div>
+        <div>
+            <h2>Liberar Locker</h2>
+            <p>Coloca tu huella para recuperar tus pertenencias</p>
+        </div>
+    </a>
+
+</main>
+
+<footer>
+    Sistema automático • Seguro y privado
+</footer>
+
+</body>
+</html>
