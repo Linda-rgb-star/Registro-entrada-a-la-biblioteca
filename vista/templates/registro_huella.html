@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Huella</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <a href="{{ url_for('inicio') }}" class="volver">← Volver</a>
+    <div class="header-titulo">
+        <h1>Registro de Usuario</h1>
+        <p>Biblioteca Universidad Libre Seccional Bogotá</p>
+    </div>
+</header>
+
+<div class="contenedor-huella">
+
+    <h2>Registro de Huella Dactilar</h2>
+    <p>Coloca tu dedo en el lector para registrar tu huella biométrica</p>
+
+    <!-- FORMULARIO -->
+    <form method="POST" action="{{ url_for('guardar_huella') }}">
+        <input type="hidden" name="identificacion" value="{{ identificacion }}">
+
+        <button type="submit" class="huella-btn">
+            <img src="{{ url_for('static', filename='img/imghuella.png') }}" alt="Huella">
+        </button>
+    </form>
+
+    <h3>Toca el lector</h3>
+    <p>Haz clic en el círculo para comenzar</p>
+
+    <div class="nota">
+        Nota: Tu huella dactilar se almacenará de forma segura y encriptada.
+        Solo se utilizará para autenticarte en el sistema de lockers.
+    </div>
+
+</div>
+
+<footer>
+    Sistema de Gestión de Lockers • 2026
+</footer>
+
+</body>
+</html>

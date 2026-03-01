@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-content">
+
+        <div class="header-left">
+            <a href="{{ url_for('inicio') }}" class="btn-volver">← Volver</a>
+
+            <img src="{{ url_for('static', filename='img/logou.png') }}" 
+                 class="logo-small">
+
+            <div class="header-text">
+                <h1>Registro de Usuario</h1>
+                <p class="subtitulo">
+                    Biblioteca Universidad Libre Seccional Bogotá
+                </p>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="registro-container">
+
+    <div class="registro-card">
+        <h2>Datos Personales</h2>
+
+        <form>
+
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Ej: María García López Rivera">
+
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="usuario@unilibre.edu.co">
+
+            <label>Teléfono</label>
+            <input type="text" placeholder="+57 600 000 000">
+
+            <label>Número de identificación</label>
+            <input type="text" placeholder="Número de cédula o tarjeta de identidad">
+
+            <button type="submit" class="btn-registrar">
+                Continuar al registro de huella
+            </button>
+
+        </form>
+    </div>
+
+</main>
+
+<footer class="footer-registro">
+    Sistema de Gestión de Lockers • Sábado, 28 de febrero de 2026
+</footer>
+
+</body>
+</html>

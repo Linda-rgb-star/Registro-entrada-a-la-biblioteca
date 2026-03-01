@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Obtener Locker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<!-- HEADER (igual al principal) -->
+<header class="header">
+    <div class="header-content">
+
+        <div class="header-left">
+            <img src="{{ url_for('static', filename='img/logou.png') }}" 
+                 class="logo-small">
+            <div class="header-text">
+                <h1>Sistema De Toma De Datos Biométricos</h1>
+                <p class="subtitulo">
+                    Biblioteca Universidad Libre Seccional Bogotá
+                </p>
+            </div>
+        </div>
+
+        <a href="{{ url_for('registro') }}" class="btn-registrarse">
+            Registrarse
+        </a>
+
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="huella-container">
+
+    <div class="huella-circle">
+    <img src="{{ url_for('static', filename='img/imghuella.png') }}" 
+         class="huella-img">
+    </div>
+
+    <h2>Coloca tu huella</h2>
+    <p class="huella-sub">Toca el lector para autenticarte</p>
+
+    <h3 class="huella-instruccion">
+        Coloca tu huella para obtener tu locker
+    </h3>
+
+    <a href="{{ url_for('inicio') }}" class="btn-volver-opciones">
+        Volver a opciones
+    </a>
+
+</main>
+
+<footer class="footer-registro">
+    Sistema de Gestión de Lockers • Sábado, 28 de febrero de 2026
+</footer>
+
+</body>
+</html>

@@ -9,8 +9,24 @@
 
 <header class="header">
     <div class="header-content">
-        <h1>Sistema De Toma De Datos Biométricos</h1>
-        <p>Biblioteca Universidad Libre Seccional Bogotá</p>
+
+        <div class="header-left">
+            <img src="{{ url_for('static', filename='img/logou.png') }}" 
+                 alt="Logo Universidad" 
+                 class="logo">
+
+            <div class="header-text">
+                <h1>Sistema De Toma De Datos Biométricos</h1>
+                <p class="subtitulo">
+                    Biblioteca Universidad Libre Seccional Bogotá
+                </p>
+            </div>
+        </div>
+
+        <a href="{{ url_for('registro') }}" class="btn-registrarse">
+            Registrarse
+        </a>
+
     </div>
 </header>
 
