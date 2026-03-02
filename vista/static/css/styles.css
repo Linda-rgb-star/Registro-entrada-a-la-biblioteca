@@ -345,3 +345,21 @@ footer {
     border-radius: 10px;
     font-size: 14px;
 }
+
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+}

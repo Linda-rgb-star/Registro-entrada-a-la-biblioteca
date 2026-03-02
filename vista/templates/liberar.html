@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Liberar Locker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <h1>Sistema De Toma De Datos Biométricos</h1>
+    <p>Biblioteca Universidad Libre Seccional Bogotá</p>
+</header>
+
+<div class="contenedor-huella">
+
+    <h2>Coloca tu huella</h2>
+    <p>Toca el lector para autenticarte</p>
+
+    <form method="POST" action="{{ url_for('procesar_liberacion') }}">
+        <input type="text" name="identificacion" placeholder="Ingresa tu identificación" required>
+
+        <button type="submit" class="huella-btn">
+            <img src="{{ url_for('static', filename='img/imghuella.png') }}" alt="Huella">
+        </button>
+    </form>
+
+    <h3>Coloca tu huella para liberar tu locker</h3>
+
+    <a href="{{ url_for('inicio') }}" class="btn-volver">Volver a opciones</a>
+
+</div>
+
+<footer>
+    Sistema de Gestión de Lockers • 2026
+</footer>
+
+</body>
+</html>
