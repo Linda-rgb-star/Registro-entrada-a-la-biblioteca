@@ -76,7 +76,17 @@ def obtener():
 def liberar():
     return render_template("liberar.html")
 
+from flask import request, redirect, url_for
+from modelo.casilleroModel import UsuarioModel
 
+
+@app.route("/procesar_liberacion", methods=["POST"])
+def procesar_liberacion():
+    identificacion = request.form["identificacion"]
+
+    mensaje = UsuarioModel.liberar_locker(identificacion)
+
+    return render_template("liberar.html", mensaje=mensaje)
 # ----------------------------
 # Ejecutar servidor
 # ----------------------------

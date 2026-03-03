@@ -7,32 +7,53 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
-    <h1>Sistema De Toma De Datos Biométricos</h1>
-    <p>Biblioteca Universidad Libre Seccional Bogotá</p>
+    <div class="header-content">
+
+        <div class="header-left">
+            <img src="{{ url_for('static', filename='img/logou.png') }}" 
+                 class="logo-small">
+            <div class="header-text">
+                <h1>Sistema De Toma De Datos Biométricos</h1>
+                <p class="subtitulo">
+                    Biblioteca Universidad Libre Seccional Bogotá
+                </p>
+            </div>
+        </div>
+
+        <a href="{{ url_for('registro') }}" class="btn-registrarse">
+            Registrarse
+        </a>
+
+    </div>
 </header>
 
-<div class="contenedor-huella">
+<!-- CONTENIDO -->
+<main class="huella-container">
+
+    <div class="huella-container">
+        <button class="huella-btn">
+            <img src="{{ url_for('static', filename='img/imghuella.png') }}" 
+                 class="huella-img">
+        </button>
+    </div>
 
     <h2>Coloca tu huella</h2>
-    <p>Toca el lector para autenticarte</p>
+    <p class="huella-sub">Toca el lector para autenticarte</p>
 
-    <form method="POST" action="{{ url_for('procesar_liberacion') }}">
-        <input type="text" name="identificacion" placeholder="Ingresa tu identificación" required>
+    <h3 class="huella-instruccion">
+        Coloca tu huella para liberar tu locker
+    </h3>
 
-        <button type="submit" class="huella-btn">
-            <img src="{{ url_for('static', filename='img/imghuella.png') }}" alt="Huella">
-        </button>
-    </form>
+    <a href="{{ url_for('inicio') }}" class="btn-volver-opciones">
+        Volver a opciones
+    </a>
 
-    <h3>Coloca tu huella para liberar tu locker</h3>
+</main>
 
-    <a href="{{ url_for('inicio') }}" class="btn-volver">Volver a opciones</a>
-
-</div>
-
-<footer>
-    Sistema de Gestión de Lockers • 2026
+<footer class="footer-registro">
+    Sistema de Gestión de Lockers • Sábado, 28 de febrero de 2026
 </footer>
 
 </body>

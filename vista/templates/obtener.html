@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- HEADER (igual al principal) -->
+<!-- HEADER -->
 <header class="header">
     <div class="header-content">
 
@@ -32,10 +32,12 @@
 <!-- CONTENIDO -->
 <main class="huella-container">
 
-    <div class="huella-circle">
-    <img src="{{ url_for('static', filename='img/imghuella.png') }}" 
-         class="huella-img">
-    </div>
+    <div class="huella-container">
+    <button class="huella-btn">
+        <img src="{{ url_for('static', filename='img/imghuella.png') }}" 
+             class="huella-img">
+    </button>
+</div>
 
     <h2>Coloca tu huella</h2>
     <p class="huella-sub">Toca el lector para autenticarte</p>

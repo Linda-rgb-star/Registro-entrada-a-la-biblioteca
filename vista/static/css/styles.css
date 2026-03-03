@@ -242,53 +242,52 @@ footer {
     margin-bottom: 30px;
 }
 
-
 /* ========================= */
-/* PANTALLA OBTENER HUELLA */
+/* PANTALLA HUELLA */
 /* ========================= */
 
 .huella-container {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 120px;
     margin-bottom: 60px;
 }
 
-.huella-circle {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto 30px auto;
-    border-radius: 50%;
-    overflow: hidden; /* importante */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.huella-container {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.huella-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.huella-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
+
+
+.huella-img:hover {
+    transform: scale(1.1);
+}
 .huella-icon {
-    font-size: 90px;
+    font-size: 85px;
     color: white;
 }
 
 .huella-container h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 10px;
     color: #1f2937;
 }
 
 .huella-sub {
     color: #6b7280;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .huella-instruccion {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 25px;
     color: #1f2937;
 }
 
@@ -306,60 +305,18 @@ footer {
 .btn-volver-opciones:hover {
     background-color: #d1d5db;
 }
-
-
-
-/* HUELLAS */
-
-.contenedor-huella {
-    width: 500px;
-    margin: 60px auto;
-    background: #f5f6f8;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
 .huella-btn {
     background: none;
     border: none;
     cursor: pointer;
-    margin: 30px 0;
 }
 
-.huella-btn img {
-    width: 250px;
-    border-radius: 50%;
+.huella-img {
+    width: 300px;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.huella-btn img:hover {
-    transform: scale(1.05);
-}
-
-.nota {
-    margin-top: 30px;
-    padding: 15px;
-    background: #e6f0ff;
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-input[type="text"] {
-    padding: 12px;
-    width: 80%;
-    margin: 15px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.btn-volver {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #e0e0e0;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
+.huella-btn:hover .huella-img {
+    transform: scale(1.1);
 }
